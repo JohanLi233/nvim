@@ -61,7 +61,7 @@ hooks.add("install_plugins", function(use)
   -- 多光标
   use {
     "mg979/vim-visual-multi",
-    keys = "<C-n>",
+    keys = {"<C-n>", "<C-M-Down>", "<C-M-Up>"},
   }
 
   -- 增删改引号
@@ -148,8 +148,9 @@ hooks.add("install_plugins", function(use)
   use {
     "itchyny/vim-cursorword",
   }
+  -- 快捷注释
   use {
-    "preservim/nerdcommenter"
+    "preservim/nerdcommenter",
   }
 end)
 

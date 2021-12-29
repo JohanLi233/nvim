@@ -65,7 +65,6 @@ nmap('<leader>tm', ':TableModeToggle<CR>')
 
 -- markdown预览
 nmap('<M-rr>', ':MarkdownPreviewToggle<CR>')
-
 -- 替换默认绑定
 local hooks = require "core.hooks"
 

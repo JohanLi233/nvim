@@ -144,13 +144,12 @@ hooks.add("install_plugins", function(use)
   use {
     "xiyaowong/nvim-transparent",
   }
-  -- You Complete Me
-  use {
-    "ycm-core/YouCompleteMe",
-  }
   -- 单词下划线
   use {
     "itchyny/vim-cursorword",
+  }
+  use {
+    "preservim/nerdcommenter"
   }
 end)
 

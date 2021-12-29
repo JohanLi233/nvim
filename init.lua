@@ -61,7 +61,7 @@ hooks.add("install_plugins", function(use)
   -- 多光标
   use {
     "mg979/vim-visual-multi",
-    keys = {"<C-n>", "<C-M-Down>", "<C-M-Up>"},
+    keys = {"<C-n>"},
   }
 
   -- 增删改引号
@@ -151,6 +151,14 @@ hooks.add("install_plugins", function(use)
   -- 快捷注释
   use {
     "preservim/nerdcommenter",
+  }
+  -- python 单词高亮
+  use {
+    "numirias/semshi",
+  }
+  -- you complete met
+  use {
+    "ycm-core/YouCompleteMe",
   }
 end)
 

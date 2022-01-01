@@ -156,7 +156,7 @@ hooks.add("install_plugins", function(use)
   use {
     "numirias/semshi",
   }
-  -- you complete met
+  -- you complete me
   use {
     "ycm-core/YouCompleteMe",
   }

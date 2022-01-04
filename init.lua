@@ -160,6 +160,11 @@ hooks.add("install_plugins", function(use)
   use {
     "ycm-core/YouCompleteMe",
   }
+
+  use {
+    "scalameta/nvim-metals",
+    requires = "nvim-lua/plenary.nvim",
+  }
 end)
 
 -- alternatively, put this in a sub-folder like "lua/custom/plugins/mkdir"

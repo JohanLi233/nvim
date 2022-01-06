@@ -146,7 +146,7 @@ hooks.add("install_plugins", function(use)
   }
   -- 单词下划线
   use {
-    "itchyny/vim-cursorword",
+    "yamatsum/nvim-cursorline",
   }
   -- 快捷注释
   use {
@@ -160,11 +160,18 @@ hooks.add("install_plugins", function(use)
   use {
     "ycm-core/YouCompleteMe",
   }
-
+  -- Scala Metal complete
   use {
     "scalameta/nvim-metals",
     requires = "nvim-lua/plenary.nvim",
   }
+  -- Spell Check
+  use {
+  'lewis6991/spellsitter.nvim',
+  config = function()
+    require('spellsitter').setup { enable = true,}
+  end
+}
 end)
 
 -- alternatively, put this in a sub-folder like "lua/custom/plugins/mkdir"

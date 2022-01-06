@@ -35,15 +35,15 @@ hooks.add("install_plugins", function(use)
   -- 平滑滚动
   use {
     "karb94/neoscroll.nvim",
-     opt = true,
-     config = function()
-        require("neoscroll").setup()
-     end,
+    opt = true,
+    config = function()
+      require("neoscroll").setup()
+    end,
 
-     -- lazy loading
-     setup = function()
-       require("core.utils").packer_lazy_load "neoscroll.nvim"
-     end,
+    -- lazy loading
+    setup = function()
+      require("core.utils").packer_lazy_load "neoscroll.nvim"
+    end,
   }
 
   -- 自动打开上次浏览位置
@@ -53,9 +53,9 @@ hooks.add("install_plugins", function(use)
 
   -- 历史修改记录
   use {
-        "mbbill/undotree",
-        opt = true,
-        cmd = "UndotreeToggle",
+    "mbbill/undotree",
+    opt = true,
+    cmd = "UndotreeToggle",
   }
 
   -- 多光标
@@ -75,28 +75,11 @@ hooks.add("install_plugins", function(use)
     "gcmt/wildfire.vim",
     keys = "<CR>",
   }
-
   -- 代码格式化
-  -- use {
-  --     "jose-elias-alvarez/null-ls.nvim",
-  --     after = "nvim-lspconfig",
-  --     config = function()
-  --        require("custom.configs.null-ls").setup()
-  --     end,
-  --  }
   use {
     "Chiel92/vim-autoformat",
     cmd = "Autoformat",
   }
-  -- use {
-  --   "mhartington/formatter.nvim",
-  --   opt = true,
-  --   ft = "cpp",
-  --   config = function ()
-  --     require("custom.configs.format")
-  --   end,
-  -- }
-
   -- 快速分析启动时间
   use {
     "dstein64/vim-startuptime",
@@ -167,11 +150,11 @@ hooks.add("install_plugins", function(use)
   }
   -- Spell Check
   use {
-  'lewis6991/spellsitter.nvim',
-  config = function()
-    require('spellsitter').setup { enable = true,}
-  end
-}
+    'lewis6991/spellsitter.nvim',
+    config = function()
+      require('spellsitter').setup { enable = true,}
+    end
+  }
 end)
 
 -- alternatively, put this in a sub-folder like "lua/custom/plugins/mkdir"

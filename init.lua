@@ -146,7 +146,7 @@ hooks.add("install_plugins", function(use)
   }
   -- 单词下划线
   use {
-    "yamatsum/nvim-cursorline",
+    "xiyaowong/nvim-cursorword",
   }
   -- 快捷注释
   use {

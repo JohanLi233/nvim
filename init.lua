@@ -155,6 +155,10 @@ hooks.add("install_plugins", function(use)
       require('spellsitter').setup { enable = true,}
     end
   }
+  -- snip run
+   use {
+     'michaelb/sniprun', run = 'bash ./install.sh'
+   }
 end)
 
 -- alternatively, put this in a sub-folder like "lua/custom/plugins/mkdir"

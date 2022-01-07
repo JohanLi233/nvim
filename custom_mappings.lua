@@ -3,6 +3,15 @@ function map(mode, shortcut, command)
   vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })
 end
 
+
+function rmap(mode, shortcut, command)
+  vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = false, silent = true })
+end
+
+function dmap(mode, shortcut)
+  vim.api.nvim_del_keymap(mode, shortcut, {noremap = false, silent = true})
+end
+
 function nmap(shortcut, command)
   map('n', shortcut, command)
 end
@@ -66,6 +75,8 @@ nmap('<leader>tm', ':TableModeToggle<CR>')
 -- markdown预览
 nmap('<M-rr>', ':MarkdownPreviewToggle<CR>')
 -- 替换默认绑定
+map('i', 'qd', 'jk')
+-- rmap('n','n','j')
 local hooks = require "core.hooks"
 
 hooks.add("setup_mappings", function(map)

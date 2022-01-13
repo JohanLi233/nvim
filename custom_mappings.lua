@@ -1,10 +1,9 @@
 -- 简化绑定格式
 
 local map = require("core.utils").map
-local noremap = require("core.utils").noremap
 
 function rmap(mode, shortcut, command)
-  noremap(mode, shortcut, command, { noremap = false, silent = true })
+  map(mode, shortcut, command, { noremap = false, silent = true })
 end 
 
 function nmap(shortcut, command)
@@ -24,16 +23,16 @@ vim.g.mapleader = " "
 nmap("<C-q>", ":q<CR>")
 
 -- 快速分屏
-nmap('sl', ':set splitright<CR>:vsplit<CR>')
-nmap('sh', ':set nosplitright<CR>:vsplit<CR>')
-nmap('sj', ':set splitright<CR>:split<CR>')
-nmap('sk', ':set nosplitright<CR>:split<CR>')
+nmap('sh', ':set splitright<CR>:vsplit<CR>')
+nmap('sn', ':set nosplitright<CR>:vsplit<CR>')
+nmap('se', ':set splitright<CR>:split<CR>')
+nmap('so', ':set nosplitright<CR>:split<CR>')
 
 -- 在分屏间移动
 nmap('<C-h>', '<C-w>h')
-nmap('<C-j>', '<C-w>j')
-nmap('<C-k>', '<C-w>k')
-nmap('<C-l>', '<C-w>l')
+nmap('<C-n>', '<C-w>j')
+nmap('<C-e>', '<C-w>k')
+nmap('<C-o>', '<C-w>l')
 
 -- 改变窗口大小
 nmap('<up>', ':res +5<CR>')
@@ -71,5 +70,12 @@ nmap('<leader>tm', ':TableModeToggle<CR>')
 nmap('<M-rr>', ':MarkdownPreviewToggle<CR>')
 -- 替换默认绑定
 map('i', 'qd', 'jk')
--- rmap('n','n','j')
-
+map('', 'n', 'j')
+map('', 'j', 'n')
+map('', 'e', 'k')
+map('', 'k', 'e')
+map('', 'o', 'l')
+map('', 'l', 'o')
+map('i', '<C-o>', '<Right>')
+map('i', '<C-e>', '<Up>')
+map('i', '<C-n>', '<Down>')

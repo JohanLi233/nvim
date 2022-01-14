@@ -1,5 +1,5 @@
 local present, ts_config = pcall(require, "nvim-treesitter.configs")
-
+-- 麻烦生效
 if not present then
    return
 end

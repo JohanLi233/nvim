@@ -143,7 +143,6 @@ customPlugins.add(function(use)
   use {
     "ycm-core/YouCompleteMe",
     -- lazy loading
-
     setup = function()
       require("core.utils").packer_lazy_load "neoscroll.nvim"
     end,
